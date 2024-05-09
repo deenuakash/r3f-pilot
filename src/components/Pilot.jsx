@@ -1,16 +1,23 @@
 import { useFrame } from '@react-three/fiber'
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 function Pilot() {
 
     const orbitControlsRef = useRef(null);
 
+    const [count,setCount] = useState(0)
+
     useFrame((state) => {
-        // console.log(state.mouse)
+        const {x,y} = state.pointer
+        // console.log(x,y)
+        orbitControlsRef.current.setAzimuthalAngle(-x*(Math.PI/180)*90)
+        orbitControlsRef.current.setPolarAngle(y)
     })
 
-    TODO: //learn difference between radian and degree
+    TODO: 
+    //learn difference between radian and degree
+    // Azimuthal vs Polar angle
 
     useEffect(() => {
         console.log(orbitControlsRef?.current)
