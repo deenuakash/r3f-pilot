@@ -5,8 +5,8 @@ import { Canvas } from '@react-three/fiber'
 function App() {
 
   return (
-    <Canvas id="canvas">
-      <Pilot />
+    <Canvas id="canvas" shadows>
+      <Pilot/>
     </Canvas>
   )
 }
