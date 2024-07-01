@@ -43,7 +43,7 @@ function Pilot() {
             </mesh>
 
             <ambientLight args={["0xffffff", 0.75]} />
-            <directionalLight args={["0xffffff", 2, 25, (Math.PI / 180) * 50, 0.6]} position={[-3, 1, 0]} castShadow />
+            <directionalLight args={["0xffffff", 10, 25, (Math.PI / 180) * 50, 0.6]} position={[-3, 1, -5]} castShadow />
 
             <Environment background>
                 <mesh>
